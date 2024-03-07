@@ -55,7 +55,7 @@ Projede kullanılan iş başvuru verisi, JSON formatında sağlanmıştır. Her 
 
 <h2> Proje Amaci</h2>
 
-React, Redux Toolkit gibi güçlü bir araç kiti kullanarak  temel bileşenlerin nasıl oluşturulacağını, verilerin nasıl yönetileceğini ve kullanıcı etkileşimlerinin nasıl işleneceğini daha iyi anlamayı amaçlamaktadır.'
+React, Redux Toolkit gibi güçlü bir araç kiti kullanarak  temel bileşenlerin nasıl oluşturulacağını, verilerin nasıl yönetileceğini ve kullanıcı etkileşimlerinin nasıl işleneceğini anlamayı amaçlamaktadır.
 
 
 
