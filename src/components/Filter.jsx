@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
 import { sortOpt, statusOpt, typeOpt } from "../constants";
 import { useDispatch } from "react-redux";
-import { clearFilters, filterBySearch, sortJobs } from "../redux/slices/jobSlice";
+import {
+  clearFilters,
+  filterBySearch,
+  sortJobs,
+} from "../redux/slices/jobSlice";
 
 const Filter = ({ jobs }) => {
   const [text, setText] = useState("");
@@ -28,10 +32,10 @@ const Filter = ({ jobs }) => {
           <select
             onChange={(e) =>
               dispatch(
-                filterBySearch({ 
-                  field: "status", 
+                filterBySearch({
+                  field: "status",
                   text: e.target.value,
-                 })
+                })
               )
             }
             name="status"
@@ -49,14 +53,18 @@ const Filter = ({ jobs }) => {
 
         <div>
           <label>Tür</label>
-          <select onChange={(e) =>
+          <select
+            onChange={(e) =>
               dispatch(
-                filterBySearch({ 
-                  field: "type", 
+                filterBySearch({
+                  field: "type",
                   text: e.target.value,
-                 })
+                })
               )
-            } name="type" required>
+            }
+            name="type"
+            required
+          >
             <option value={""} hidden>
               Seçiniz
             </option>
@@ -70,9 +78,10 @@ const Filter = ({ jobs }) => {
 
         <div>
           <label>Sırala</label>
-          <select onChange={(e)=>dispatch(
-            sortJobs(e.target.value)
-          )} name="type">
+          <select
+            onChange={(e) => dispatch(sortJobs(e.target.value))}
+            name="type"
+          >
             <option value={""} hidden>
               Seçiniz
             </option>
@@ -85,8 +94,11 @@ const Filter = ({ jobs }) => {
         </div>
 
         <div>
-          <button  
-           onChange={()=>dispatch(clearFilters())}   type="reset" className="btn">
+          <button
+            onChange={() => dispatch(clearFilters())}
+            type="reset"
+            className="btn"
+          >
             <span>Filtreleri Sıfırla</span>
             <div id="container-stars">
               <div id="stars"></div>

@@ -25,9 +25,7 @@ const JobList = () => {
 
   return (
     <div className="list-page">
-
-<Filter jobs ={state.jobs}/>
-
+      <Filter jobs={state.jobs} />
 
       {state.isLoading ? (
         <Loader />

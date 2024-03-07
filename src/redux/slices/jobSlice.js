@@ -48,31 +48,29 @@ const jobSlice = createSlice({
     sortJobs: (state, action) => {
       switch (action.payload) {
         case "a-z":
-          state.jobs.sort((a, b) =>
-           a.company.localeCompare(b.company));
+          state.jobs.sort((a, b) => a.company.localeCompare(b.company));
           break;
 
         case "z-a":
-          state.jobs.sort((a, b) =>
-         b.company.localeCompare(a.company));
+          state.jobs.sort((a, b) => b.company.localeCompare(a.company));
           break;
 
         case "En Yeni":
-          state.jobs.sort((a,b)=> new Date(b.date)-new Date(a.date))
+          state.jobs.sort((a, b) => new Date(b.date) - new Date(a.date));
           break;
 
         case "En Eski":
-          state.jobs.sort((a,b)=> new Date(a.date)-new Date(b.date))
+          state.jobs.sort((a, b) => new Date(a.date) - new Date(b.date));
           break;
 
-          default:
+        default:
           break;
       }
     },
 
-    clearFilters:(state)=>{
-      state.jobs=state.mainJobs;
-    }
+    clearFilters: (state) => {
+      state.jobs = state.mainJobs;
+    },
   },
 });
 

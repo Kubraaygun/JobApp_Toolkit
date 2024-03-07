@@ -57,7 +57,6 @@ nav {
 
 //Button
 
-
 //Ekleme Sayfasi
 
 .add-page {
@@ -99,22 +98,20 @@ nav {
   }
 }
 
-.filter-sec{
+.filter-sec {
   @extend .add-sec;
   margin: 20px auto 80px;
 
-  div:last-child{
+  div:last-child {
     align-items: unset;
-  
   }
 }
-
 
 //buton
 
 .btn {
   display: flex;
- 
+
   justify-content: center;
   align-items: center;
   width: 13rem;
@@ -126,7 +123,14 @@ nav {
   transition: 0.5s;
   animation: gradient_301 5s ease infinite;
   border: double 4px transparent;
-  background-image: linear-gradient(#212121, #212121),  linear-gradient(137.48deg, #ffdb3b 10%,#FE53BB 45%, #8F51EA 67%, #0044ff 87%);
+  background-image: linear-gradient(#212121, #212121),
+    linear-gradient(
+      137.48deg,
+      #ffdb3b 10%,
+      #fe53bb 45%,
+      #8f51ea 67%,
+      #0044ff 87%
+    );
   background-origin: border-box;
   background-clip: content-box, border-box;
 }
@@ -147,7 +151,7 @@ span {
   font-family: "poppins";
   font-size: 16px;
   letter-spacing: 2px;
-  color: #FFFFFF;
+  color: #ffffff;
   text-shadow: 0 0 4px white;
 }
 
@@ -179,18 +183,18 @@ span {
 }
 
 .btn:hover {
-  transform: scale(1.1)
+  transform: scale(1.1);
 }
 
 .btn:active {
-  border: double 4px #FE53BB;
+  border: double 4px #fe53bb;
   background-origin: border-box;
   background-clip: content-box, border-box;
   animation: none;
 }
 
 .btn:active .circle {
-  background: #FE53BB;
+  background: #fe53bb;
 }
 
 #stars {

@@ -49,18 +49,13 @@ const AddJob = () => {
       });
   };
 
-const removeDuplicates=(key)=>{
-const arr = state.jobs.map((i)=>i[key])
+  const removeDuplicates = (key) => {
+    const arr = state.jobs.map((i) => i[key]);
 
-const filtred = 
-arr.filter((value,index)=> arr.indexOf(value) === index)
+    const filtred = arr.filter((value, index) => arr.indexOf(value) === index);
 
-
-
-return filtred;
-
-}
-
+    return filtred;
+  };
 
   return (
     <div className="add-page">
@@ -72,7 +67,7 @@ return filtred;
             <input list="positions" name="position" type="text" required />
             <datalist id="positions">
               {removeDuplicates("position").map((i) => (
-                <option  value={i} />
+                <option value={i} />
               ))}
             </datalist>
           </div>
@@ -82,8 +77,8 @@ return filtred;
             <input list="companies" name="company" type="text" required />
 
             <datalist id="companies">
-            {removeDuplicates("company").map((i) => (
-                <option  value={i} />
+              {removeDuplicates("company").map((i) => (
+                <option value={i} />
               ))}
             </datalist>
           </div>
@@ -92,8 +87,8 @@ return filtred;
             <label>Lokasyon</label>
             <input list="locations" name="location" type="text" required />
             <datalist id="locations">
-            {removeDuplicates("location").map((i) => (
-                <option  value={i} />
+              {removeDuplicates("location").map((i) => (
+                <option value={i} />
               ))}
             </datalist>
           </div>
@@ -105,7 +100,9 @@ return filtred;
                 Seçiniz
               </option>
               {statusOpt.map((i) => (
-                <option key={i} value={i}>{i}</option>
+                <option key={i} value={i}>
+                  {i}
+                </option>
               ))}
             </select>
           </div>
@@ -117,24 +114,24 @@ return filtred;
                 Seçiniz
               </option>
               {typeOpt.map((i) => (
-                <option key={i} value={i}>{i}</option>
+                <option key={i} value={i}>
+                  {i}
+                </option>
               ))}
             </select>
           </div>
           <div>
+            <button className="btn" type="button">
+              <span>İş Ekle</span>
+              <div id="container-stars">
+                <div id="stars"></div>
+              </div>
 
-
-          <button className="btn" type="button">
-  <span>İş Ekle</span>
-  <div id="container-stars">
-    <div id="stars"></div>
-  </div>
-
-  <div id="glow">
-    <div className="circle"></div>
-    <div className="circle"></div>
-  </div>
-</button>
+              <div id="glow">
+                <div className="circle"></div>
+                <div className="circle"></div>
+              </div>
+            </button>
           </div>
         </form>
       </section>
