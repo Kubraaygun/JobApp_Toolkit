@@ -16,31 +16,35 @@ Bu proje iş başvurularını takip etmek için geliştirilmiş bir web uygulama
 
 
 <h2>Proje Bileşenleri </h2>
+<ul>
 <li> Header:
 <ul>
 <li>Uygulamanın üst kısmında yer alır ve farklı sayfalar arasında gezinmeyi sağlar.</li>
 </ul>
 </li>
-<br>
+</br>
 <li>JobList:
 <ul>
 <li>Kullanıcının iş başvurularını listeleyen ana bileşendir.</li>
 <li>Redux store'dan iş verilerini alır ve gerekirse filtreler veya sıralar.</li>
 </ul>
 </li>
-<br>
+</br>
 <li>AddJob:
 <ul>
 <li>Yeni iş başvurusu eklemek için kullanılan bileşendir. </li>
 <li>Kullanıcıdan gerekli bilgileri alır ve bu bilgileri Redux store'a ekler. </li>
 </ul>
-</li>
+</li></br>
+
 <li>Filter:
 <ul>
 <li>İş başvurularını filtrelemek için kullanılan bileşendir. </li>
 <li>Kullanıcıya durum, tür veya diğer özelliklere göre filtreleme yapma imkanı sunar. </li>
 </ul>
 </li>
+
+
 </ul>
 
 <h2> Veri Yapısı</h2>
@@ -67,7 +71,7 @@ React, Redux Toolkit gibi güçlü bir araç kiti kullanarak  temel bileşenleri
 <li>@reduxjs/toolkit</li>
 <li>Uuid</li>
 <li>React-Icons</li>
-</ul
+</ul>
 
 
 <h2>Ekran Görüntüsü</h2>
