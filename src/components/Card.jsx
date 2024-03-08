@@ -16,7 +16,8 @@ const Card = ({ job }) => {
   };
 
   const handleDelete = () => {
-    axios
+    if(confirm("Silmek İstediğinizden Emin Misiniz?")){
+      axios
       .delete(`http://localhost:4000/jobs/${job.id}`)
       .then(() => {
         toast.info("silme basarili");
@@ -25,6 +26,8 @@ const Card = ({ job }) => {
       .catch(() => {
         toast.warn("silme islemi basarisiz");
       });
+    }
+    
   };
 
   return (
